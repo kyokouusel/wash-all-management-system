@@ -1,0 +1,398 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.dashboard{
+    display: flex;
+    height: 100vh;
+}
+
+
+/*sidebar content*/
+
+.sidebar{
+    width: 250px; /* Fixed width */
+    background-color: #07162c;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto; /* Allow scrolling if needed */
+}
+
+.sidebar .heads img{
+    width: 150px;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.sidebar .heads{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.sidebar .menu{
+    list-style: none;
+    
+}
+.sidebar .menu li {
+    margin-bottom: 20px;
+    justify-content: center;
+}
+.sidebar .menu li a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+}
+.sidebar .menu li span{
+    margin-left: 8px;
+}
+
+.sidebar .menu li a img{
+    width:45px;
+}
+.sidebar .menu li a:hover{
+    background-color: #30394b;
+    color: white;
+}
+.main-content{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    color: white;
+}
+
+.topbar{
+    position: fixed;
+    top: 0;
+    left: 250px; /* Starts after the sidebar */
+    width: calc(100% - 250px); /* Takes remaining space */
+    background-color: #051024;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+.topbar .search {
+    margin-left: 10px; /* Ensures spacing from the sidebar */
+    flex-grow: 1; /* Takes available space */
+
+}
+
+.topbar .search input{
+    padding: 7px 20px;
+    border: 1px solid #000000;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    width: 250px;
+    transition: 0.3s ease;
+}
+.topbar .user-profile{
+    display: flex;
+    align-items: center;
+
+}
+.topbar .user-profile img{
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 70px;
+    height: 40px;
+}
+.main-content {
+    margin-left: 250px; /* Ensures it doesn't go under the sidebar */
+    margin-top: 60px; /* Avoids overlap with the topbar */
+    padding: 20px;
+}
+.card {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    width: 300px; /* Slightly wider for better layout */
+    text-align: center;
+}
+.dash-content{
+    display: flex;
+    justify-content: center; /* Centers content */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 40px; /* Reduced spacing */
+    margin-top: 20px; /* Adjusted spacing */
+    
+}
+
+.card-img-top {
+    height: 180px; 
+    object-fit: cover;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.cards{
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    border: 1px solid blue;
+}
+body, html {
+    background-color: #0B0F1A !important; 
+    color: white; 
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+/* GENERAL STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #0B0F1A !important; 
+    color: white; 
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* DASHBOARD STRUCTURE */
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background-color: #07162c;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar .heads img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.sidebar .menu {
+    list-style: none;
+}
+
+.sidebar .menu li {
+    margin-bottom: 20px;
+}
+
+.sidebar .menu li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.sidebar .menu li a:hover {
+    background-color: #30394b;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    margin-left: 250px;
+    margin-top: 60px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TOPBAR */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    background-color: #051024;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.topbar .search input {
+    padding: 7px 20px;
+    border: 1px solid #000000;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    width: 250px;
+    transition: 0.3s ease;
+}
+
+.topbar .user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.topbar .user-profile img {
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.topbar .user-profile .btn-warning {
+    margin-right: 15px;
+}
+
+/* CART PAGE STYLING */
+.cart-content {
+    margin-top: 20px;
+    padding: 25px;
+    background-color: #07162c;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    
+}
+
+.cart-content h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* CART TABLE */
+.table {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-dark {
+    background-color: #0B1C3A;
+}
+
+.table th {
+    background-color: #051024;
+    color: white;
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn-success, .btn-danger {
+    width: 100%;
+    border-radius: 5px;
+    font-size: 40px;
+}
+
+.btn-danger {
+    background-color: red;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.total-price {
+    font-size: 40px;
+    font-weight: bold;
+    color: #4CAF50;
+    text-align: center;
+    margin-top: 20px;
+}
+.icon{
+    width: 50px;
+    height: 40px;
+   display: inline-block;
+   margin-right: 15px;
+   
+}
+.card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.4s ease-in-out;
+    text-align: center;
+}
+
+.card-background {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+}
+
+
+.card-hover:hover .card-background {
+    transform: scale(1.15);
+}
+
+.card-hover:not(:hover) .card-background {
+    transform: scale(0.9);
+}
+
+
+.cardgrid:hover .card-hover:not(:hover) .card-background,
+.cardgrid:hover .card-hover:not(:hover) .card-body {
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(10px);
+    transition: filter 0.4s ease-in-out;
+}
+
+
+.card-hover:hover .card-body {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+.card-body h5 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: filter 0.4s ease-in-out;
+}
